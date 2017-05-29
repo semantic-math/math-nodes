@@ -1,6 +1,6 @@
 {
   "name": "math-nodes",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Creation and identification utility functions for nodes in math-ast ASTs",
   "main": "dist/math-nodes.js",
   "scripts": {
