@@ -1,14 +1,20 @@
 {
   "name": "math-nodes",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "description": "Creation and identification utility functions for nodes in math-ast ASTs",
   "main": "dist/math-nodes.js",
   "scripts": {
     "lint": "eslint lib",
     "prepublish": "webpack",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "pre-commit": "lint",
+  "jest": {
+    "setupTestFrameworkScriptFile": "<rootDir>/node_modules/babel-polyfill/dist/polyfill.js",
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest"
+    }
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/semantic-math/math-nodes.git"
@@ -24,8 +30,11 @@
     "babel-eslint": "^7.2.3",
     "babel-loader": "^7.0.0",
     "babel-plugin-transform-object-rest-spread": "^6.22.0",
+    "babel-polyfill": "^6.23.0",
     "babel-preset-es2015": "^6.24.1",
     "eslint": "^4.0.0",
+    "jest": "^20.0.4",
+    "math-parser": "^0.10.5",
     "pre-commit": "^1.2.2",
     "webpack": "^2.4.1"
   }
