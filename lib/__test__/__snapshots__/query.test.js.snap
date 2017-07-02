@@ -1,0 +1,248 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`query getCoefficientsAndConstants 2 1`] = `
+{
+    "others": [
+    ],
+    "constants": [
+        {
+            "value": "2",
+            "type": "Number"
+        }
+    ],
+    "coefficientMap": {
+    }
+}
+`;
+
+exports[`query getCoefficientsAndConstants 2 x y z 1`] = `
+{
+    "others": [
+    ],
+    "constants": [
+    ],
+    "coefficientMap": {
+        "x y z": [
+            {
+                "value": "2",
+                "type": "Number"
+            }
+        ]
+    }
+}
+`;
+
+exports[`query getCoefficientsAndConstants 2/3 + 3 + cos(4) 1`] = `
+{
+    "others": [
+        {
+            "type": "Apply",
+            "op": {
+                "type": "Identifier",
+                "name": "cos"
+            },
+            "args": [
+                {
+                    "value": "4",
+                    "type": "Number"
+                }
+            ]
+        }
+    ],
+    "constants": [
+        {
+            "type": "Apply",
+            "op": "div",
+            "args": [
+                {
+                    "value": "2",
+                    "type": "Number"
+                },
+                {
+                    "value": "3",
+                    "type": "Number"
+                }
+            ]
+        },
+        {
+            "value": "3",
+            "type": "Number"
+        }
+    ],
+    "coefficientMap": {
+    }
+}
+`;
+
+exports[`query getCoefficientsAndConstants 2x 1`] = `
+{
+    "others": [
+    ],
+    "constants": [
+    ],
+    "coefficientMap": {
+        "x": [
+            {
+                "value": "2",
+                "type": "Number"
+            }
+        ]
+    }
+}
+`;
+
+exports[`query getCoefficientsAndConstants 2x^2 1`] = `
+{
+    "others": [
+    ],
+    "constants": [
+    ],
+    "coefficientMap": {
+        "x^2": [
+            {
+                "value": "2",
+                "type": "Number"
+            }
+        ]
+    }
+}
+`;
+
+exports[`query getCoefficientsAndConstants 2x^3 + 3 1`] = `
+{
+    "others": [
+    ],
+    "constants": [
+        {
+            "value": "3",
+            "type": "Number"
+        }
+    ],
+    "coefficientMap": {
+        "x^3": [
+            {
+                "value": "2",
+                "type": "Number"
+            }
+        ]
+    }
+}
+`;
+
+exports[`query getCoefficientsAndConstants 3x^2 * 2x^2 1`] = `
+{
+    "others": [
+    ],
+    "constants": [
+    ],
+    "coefficientMap": {
+        "x^2": [
+            {
+                "value": "3",
+                "type": "Number"
+            },
+            {
+                "value": "2",
+                "type": "Number"
+            }
+        ]
+    }
+}
+`;
+
+exports[`query getCoefficientsAndConstants x^3 + y^3 + x y z + 3 1`] = `
+{
+    "others": [
+    ],
+    "constants": [
+        {
+            "value": "3",
+            "type": "Number"
+        }
+    ],
+    "coefficientMap": {
+        "y^3": [
+            {
+                "value": "1",
+                "type": "Number"
+            }
+        ],
+        "x^3": [
+            {
+                "value": "1",
+                "type": "Number"
+            }
+        ],
+        "x y z": [
+            {
+                "value": "1",
+                "type": "Number"
+            }
+        ]
+    }
+}
+`;
+
+exports[`query getVariableFactorName 2 x y z 1`] = `
+[
+    {
+        "type": "Identifier",
+        "name": "x"
+    },
+    {
+        "type": "Identifier",
+        "name": "y"
+    },
+    {
+        "type": "Identifier",
+        "name": "z"
+    }
+]
+`;
+
+exports[`query getVariableFactorName 2x 1`] = `
+[
+    {
+        "type": "Identifier",
+        "name": "x"
+    }
+]
+`;
+
+exports[`query getVariableFactorName 2x^2 1`] = `
+[
+    {
+        "type": "Apply",
+        "op": "pow",
+        "args": [
+            {
+                "type": "Identifier",
+                "name": "x"
+            },
+            {
+                "value": "2",
+                "type": "Number"
+            }
+        ]
+    }
+]
+`;
+
+exports[`query getVariableFactorName x^2 1`] = `
+[
+    {
+        "type": "Apply",
+        "op": "pow",
+        "args": [
+            {
+                "type": "Identifier",
+                "name": "x"
+            },
+            {
+                "value": "2",
+                "type": "Number"
+            }
+        ]
+    }
+]
+`;
