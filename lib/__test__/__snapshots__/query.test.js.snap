@@ -74,6 +74,33 @@ exports[`query getCoefficientsAndConstants 2/3 + 3 + cos(4) 1`] = `
 }
 `;
 
+exports[`query getCoefficientsAndConstants 2/3(x + 1)^1 1`] = `
+{
+    "others": [
+    ],
+    "constants": [
+    ],
+    "coefficientMap": {
+        "(x + 1)^1": [
+            {
+                "type": "Apply",
+                "op": "div",
+                "args": [
+                    {
+                        "value": "2",
+                        "type": "Number"
+                    },
+                    {
+                        "value": "3",
+                        "type": "Number"
+                    }
+                ]
+            }
+        ]
+    }
+}
+`;
+
 exports[`query getCoefficientsAndConstants 2x 1`] = `
 {
     "others": [
@@ -183,7 +210,7 @@ exports[`query getCoefficientsAndConstants x^3 + y^3 + x y z + 3 1`] = `
 }
 `;
 
-exports[`query getVariableFactorName 2 x y z 1`] = `
+exports[`query getVariableFactors 2 x y z 1`] = `
 [
     {
         "type": "Identifier",
@@ -200,7 +227,7 @@ exports[`query getVariableFactorName 2 x y z 1`] = `
 ]
 `;
 
-exports[`query getVariableFactorName 2x 1`] = `
+exports[`query getVariableFactors 2x 1`] = `
 [
     {
         "type": "Identifier",
@@ -209,7 +236,7 @@ exports[`query getVariableFactorName 2x 1`] = `
 ]
 `;
 
-exports[`query getVariableFactorName 2x^2 1`] = `
+exports[`query getVariableFactors 2x^2 1`] = `
 [
     {
         "type": "Apply",
@@ -228,7 +255,7 @@ exports[`query getVariableFactorName 2x^2 1`] = `
 ]
 `;
 
-exports[`query getVariableFactorName x^2 1`] = `
+exports[`query getVariableFactors x^2 1`] = `
 [
     {
         "type": "Apply",
